@@ -34,6 +34,7 @@ module Numerable
 
     def numbers_hash
       {
+        1_000_000 => 'million',
         1_000 => 'thousand',
         100 => 'hundred',
         90 => 'ninety',

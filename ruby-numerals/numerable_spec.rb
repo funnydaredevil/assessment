@@ -36,6 +36,16 @@ RSpec.describe Numeric do
         dummy = RefinedDummy.new(999)
         expect(dummy.to_phrase).to eq 'nine hundred ninety-nine'
       end
+
+      it 'converts 30570 to thirty thousand and five hundreds seventy' do
+        dummy = RefinedDummy.new(30_570)
+        expect(dummy.to_phrase).to eq 'thirty thousand and five hundred seventy'
+      end
+
+      it 'converts 1045789 to one million and forty-five thousand and seven hundred eighty-nine' do
+        dummy = RefinedDummy.new(1_045_789)
+        expect(dummy.to_phrase).to eq 'one million and forty-five thousand and seven hundred eighty-nine'
+      end
     end
   end
 end
