@@ -1,3 +1,5 @@
+require './numerable'
+
 class BaseDummy
   def initialize(number)
     @number = number
@@ -7,7 +9,15 @@ class BaseDummy
 end
 
 class Dummy < BaseDummy
-  def numerize
+  def to_phrase
+    number.to_phrase
+  end
+end
+
+class RefinedDummy < BaseDummy
+  using Numerable
+
+  def to_phrase
     number.to_phrase
   end
 end
